@@ -26,7 +26,7 @@ public class Accueil extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            request.setAttribute("utilisateurs", membreDao.lister());
+            request.setAttribute("membres", membreDao.lister());
         }
         catch (DaoException e) {
             request.setAttribute("erreur", e.getMessage());
@@ -41,7 +41,7 @@ public class Accueil extends HttpServlet {
             membre.setPrenom(request.getParameter("prenom"));
             
             membreDao.ajouter(membre);
-            request.setAttribute("utilisateurs", membreDao.lister());
+            request.setAttribute("membres", membreDao.lister());
         }
         catch (Exception e) {
             request.setAttribute("erreur", e.getMessage());

@@ -42,8 +42,8 @@
     </form>
 </div>
     <ol>
-	    <c:forEach var="utilisateur" items="${ utilisateurs }">
-	    	<li><c:out value="${ utilisateur.prenom }" /> <c:out value="${ utilisateur.nom }" /></li>
+	    <c:forEach var="membre" items="${ membres }">
+	    	<li><c:out value="${ membre.prenom }" /> <c:out value="${ membre.nom }" /></li>
 	    </c:forEach>
 	</ol> 
 </div>   
