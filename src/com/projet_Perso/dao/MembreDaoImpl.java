@@ -54,7 +54,7 @@ public class MembreDaoImpl implements MembreDao {
 
     @Override
     public List<Membre> lister() throws DaoException {
-        List<Membre> utilisateurs = new ArrayList<>();
+        List<Membre> membres = new ArrayList<>();
         Connection connexion = null;
         Statement statement = null;
         ResultSet resultat = null;
@@ -72,7 +72,7 @@ public class MembreDaoImpl implements MembreDao {
                 membre.setNom(nom);
                 membre.setPrenom(prenom);
 
-                utilisateurs.add(membre);
+                membres.add(membre);
             }
         } catch (SQLException e) {
             throw new DaoException("Impossible de communiquer avec la base de données");
@@ -88,7 +88,7 @@ public class MembreDaoImpl implements MembreDao {
                 throw new DaoException("Impossible de communiquer avec la base de données");
             }
         }
-        return utilisateurs;
+        return membres;
     }
 
 }
