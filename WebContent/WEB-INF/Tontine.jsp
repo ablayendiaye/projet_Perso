@@ -22,7 +22,7 @@
 <div class="main">
 <div class="formulaire">
     <c:if test="${ !empty erreur }"><p style="color:red;"><c:out value="${ erreur }" /></p></c:if>
-<form method="post" action="bonjour">
+<form method="post" action="Accueil">
 <p>
 <table>
 	<label for="nom">Nom: <br>
